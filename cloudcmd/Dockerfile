@@ -15,10 +15,6 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
-EXPOSE 8000
-
-ENTRYPOINT [ "/etc/services.d/cloudcmd/run" ]
-
 # Build arguments
 ARG BUILD_ARCH
 ARG BUILD_DATE
