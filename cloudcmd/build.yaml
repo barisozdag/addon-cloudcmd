@@ -4,6 +4,8 @@ build_from:
   amd64: ghcr.io/hassio-addons/base/amd64:12.2.4
   armv7: ghcr.io/hassio-addons/base/armv7:12.2.4
   armhf: ghcr.io/hassio-addons/base/armhf:12.2.4
+args:
+  release: 16.6.0
 codenotary:
   base_image: codenotary@frenck.dev
   signer: baris@ozdag.net

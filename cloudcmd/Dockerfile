@@ -1,14 +1,16 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.2.4
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/aarch64:12.2.4
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-ARG BUILD_ARCH=amd64
+ARG BUILD_ARCH=aarch64
+ARG RELEASE
 
 # hadolint ignore=DL3008
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-    nodejs npm \
-    && npm i cloudcmd -g
+    nodejs=16.17.1-r0 \
+    npm=8.10.0-r0 \
+    && npm i cloudcmd@${RELEASE} -g
 
 # Copy root filesystem
 COPY rootfs /
