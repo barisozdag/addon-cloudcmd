@@ -1,0 +1,11 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# barisozdag's Personal Home Assistant Add-ons: CloudCMD
+# Take down the S6 supervision tree when the CloudCMD fails
+# ==============================================================================
+if [[ "${1}" -ne 0 ]] && [[ "${1}" -ne 256 ]]; then
+  bashio::log.warning "CloudCMD crashed, halting add-on"
+  /run/s6/basedir/bin/halt
+fi
+
+bashio::log.info "CloudCMD stopped, restarting..."

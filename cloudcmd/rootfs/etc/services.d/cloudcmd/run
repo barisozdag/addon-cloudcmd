@@ -1,0 +1,13 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# barisozdag's Personal Home Assistant Add-ons: CloudCMD
+# Runs the CloudCMD
+# ==============================================================================
+bashio::log.info 'Starting the CloudCMD...'
+
+export CLOUDCMD_TERMINAL=true
+export CLOUDCMD_TERMINAL_PATH=gritty
+export CLOUDCMD_OPEN=false
+
+# Run the CloudCMD
+exec cloudcmd
