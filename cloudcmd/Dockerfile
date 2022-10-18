@@ -10,8 +10,8 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
     nodejs=16.17.1-r0 \
     npm=8.10.0-r0 \
-    && npm i cloudcmd@${RELEASE} -g \
-    && npm i gritty@7.1.0 -g
+    nginx=1.22.0-r1 \
+    && npm i cloudcmd@${RELEASE} -g
 
 # Copy root filesystem
 COPY rootfs /

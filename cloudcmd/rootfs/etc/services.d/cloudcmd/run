@@ -5,8 +5,7 @@
 # ==============================================================================
 bashio::log.info 'Starting the CloudCMD...'
 
-export CLOUDCMD_TERMINAL=true
-export CLOUDCMD_TERMINAL_PATH=gritty
+export CLOUDCMD_TERMINAL=false
 export CLOUDCMD_OPEN=false
 
 # Run the CloudCMD
