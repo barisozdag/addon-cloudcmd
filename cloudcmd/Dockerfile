@@ -16,6 +16,9 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
+ENTRYPOINT [ "/entrypoint.sh" ]
+RUN chmod 777 /entrypoint.sh
+
 # Build arguments
 ARG BUILD_ARCH
 ARG BUILD_DATE
