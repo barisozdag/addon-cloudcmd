@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # ==============================================================================
 
-# Wait for transmission to become available
+# Wait for cloudcmd to become available
 bashio::net.wait_for 8000
 
 bashio::log.info "Starting NGinx..."
