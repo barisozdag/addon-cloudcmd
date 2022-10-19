@@ -16,8 +16,9 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
-ENTRYPOINT [ "/entrypoint.sh" ]
-RUN chmod 777 /entrypoint.sh
+RUN mkdir -p /var/lib/nginx/tmp /var/log/nginx \
+    && chown -R "$(id -u)":"$(id -g)" /var/lib/nginx /var/log/nginx \
+    && chmod -R 755 /var/lib/nginx /var/log/nginx
 
 # Build arguments
 ARG BUILD_ARCH
