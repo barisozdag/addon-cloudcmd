@@ -5,8 +5,7 @@ slug: cloudcmd
 description: Cloud Commander a file manager for the web with console and editor.
 url: https://github.com/barisozdag/addon-cloudcmd
 codenotary: baris@ozdag.net
-ingress: true
-ingress_stream: true
+webui: http://[HOST]:[PORT:8000]
 panel_icon: "mdi:file-search"
 startup: services
 init: false

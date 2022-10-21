@@ -10,15 +10,10 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
     nodejs=16.17.1-r0 \
     npm=8.10.0-r0 \
-    nginx=1.22.0-r1 \
     && npm i cloudcmd@${RELEASE} -g
 
 # Copy root filesystem
 COPY rootfs /
-
-RUN mkdir -p /var/lib/nginx/tmp /var/log/nginx \
-    && chown -R "$(id -u)":"$(id -g)" /var/lib/nginx /var/log/nginx \
-    && chmod -R 755 /var/lib/nginx /var/log/nginx
 
 # Build arguments
 ARG BUILD_ARCH
