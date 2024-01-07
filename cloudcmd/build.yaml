@@ -4,4 +4,4 @@ build_from:
   amd64: ghcr.io/hassio-addons/base/amd64:14.3.3
   armv7: ghcr.io/hassio-addons/base/armv7:14.3.3
 args:
-  release: 16.17.8
+  release: 17.0.0
