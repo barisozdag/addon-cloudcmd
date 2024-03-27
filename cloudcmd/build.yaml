@@ -3,4 +3,4 @@ build_from:
   aarch64: ghcr.io/hassio-addons/base/aarch64:15.0.7
   amd64: ghcr.io/hassio-addons/base/amd64:15.0.7
 args:
-  release: 17.0.3
+  release: 17.1.6
