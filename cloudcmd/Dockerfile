@@ -8,7 +8,7 @@ ARG RELEASE
 # hadolint ignore=DL3008
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-    nodejs=20.11.1-r0 \
+    nodejs=20.12.1-r0 \
     npm=10.2.5-r0 \
     && npm i cloudcmd@${RELEASE} -g
 
