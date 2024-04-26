@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+
+if ! bashio::fs.file_exists '/config/settings.json'; then
+  echo "{}" > /config/settings.json
+fi
