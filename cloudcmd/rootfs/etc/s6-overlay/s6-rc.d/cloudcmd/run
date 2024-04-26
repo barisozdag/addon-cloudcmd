@@ -10,4 +10,4 @@ export CLOUDCMD_TERMINAL=false
 export CLOUDCMD_OPEN=false
 
 # Run the CloudCMD
-exec cloudcmd
+exec cloudcmd -c /config/settings.json
